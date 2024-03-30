@@ -1,10 +1,5 @@
 package oy.tol.tra;
 
-/**
- * A simple array of student grades to be used in testing
- * misbehaving algorithm for reversing the array.
- */
-
 public class Algorithms {
 
     private Integer [] array = null;
@@ -16,10 +11,6 @@ public class Algorithms {
         }
     }
 
-
-    /**
-     * The method to reverse the internal Java int array.
-     */
     public static <T extends Comparable<T>> void reverse(T[] array) {
         int len = array.length;
         for(int i = 0; i < len/2; i++){
@@ -29,9 +20,6 @@ public class Algorithms {
         }
     }
 
-    /**
-     * Sorts the array to ascending order.
-     */
     public static <T extends Comparable<T>> void sort(T[] array) {
         int len = array.length;
         for(int i = 0; i < len; i++){
@@ -46,10 +34,6 @@ public class Algorithms {
         }
     }
 
-    /**
-     * Returns the plain Java int [] array for investigation.
-     * @return The int array.
-     */
     public Integer [] getArray() {
         return array;
     }
