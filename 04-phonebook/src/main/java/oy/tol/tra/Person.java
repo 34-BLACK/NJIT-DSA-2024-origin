@@ -39,10 +39,11 @@ public class Person implements Comparable<Person> {
      */
     @Override
     public int hashCode() {
-        int hash = 5381;
-        hash = hash * 31 + firstName.hashCode();
-        hash = hash * 31 + lastName.hashCode();
-        // Implement hash function here.
+        int hash=0;
+        String fullName = getFullName();
+        for (int i = 0; i < fullName.length(); i++) {
+            hash=37*hash+fullName.charAt(i);
+        }
         return Math.abs(hash);
     }
 
